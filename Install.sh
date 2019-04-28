@@ -12,11 +12,12 @@ sudo pacman -S archlinuxcn-keyring
 # install applications
 sudo pacman -S \
 xorg i3-gaps polybar dunst compton \
+networkmanager network-manager-applet \
 vim zsh curl xfce4-terminal \
 pikaur visual-studio-code-bin \
 fcitx fcitx-{gtk2,gtk3,qt4,qt5} fcitx-sogoupinyin fcitx-configtool \
 gnome-screenshot pulseaudio pulseaudio-alsa pamixer nitrogen \
-lxappearance pavucontrol polkit-gnome thunar\
+lxappearance pavucontrol polkit-gnome thunar \
 wqy-microhei nerd-fonts-complete \
 chromium netease-cloud-music \
 gcc clang npm python python-gobject python-gobject2
@@ -71,3 +72,6 @@ cd $HOME/Downloads/vimix-icon-theme/
 # set basic git config
 git config --global user.name "sxyugao"
 git config --global user.email "sxyugao@qq.com"
+
+# enable networkmanager service
+sudo systemctl enable NetworkManager
