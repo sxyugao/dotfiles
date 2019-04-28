@@ -18,7 +18,7 @@ fcitx fcitx-{gtk2,gtk3,qt4,qt5} fcitx-sogoupinyin fcitx-configtool \
 gnome-screenshot pulseaudio pulseaudio-alsa pamixer nitrogen \
 lxappearance pavucontrol polkit-gnome thunar\
 wqy-microhei nerd-fonts-complete \
-google-chrome netease-cloud-music \
+chromium netease-cloud-music \
 gcc clang npm python python-gobject python-gobject2
 
 pikaur -S lux clipit
