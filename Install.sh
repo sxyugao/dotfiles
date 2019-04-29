@@ -11,14 +11,14 @@ sudo pacman -S archlinuxcn-keyring
 
 # install applications
 sudo pacman -S \
-xorg i3-gaps polybar dunst compton \
+xorg i3-gaps polybar dunst compton dmenu \
 vim zsh curl xfce4-terminal \
 gcc clang npm python python-gobject python-gobject2 \
 wqy-microhei nerd-fonts-complete \
 networkmanager network-manager-applet \
 fcitx fcitx-{gtk2,gtk3,qt4,qt5} fcitx-sogoupinyin fcitx-configtool \
 gnome-screenshot pulseaudio pulseaudio-alsa pamixer nitrogen \
-lxappearance pavucontrol polkit-gnome thunar \
+lxappearance pavucontrol polkit-gnome thunar gvfs \
 pikaur visual-studio-code-bin \
 chromium netease-cloud-music playerctl
 
