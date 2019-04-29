@@ -29,6 +29,10 @@ if [ ! -d $HOME/.config ]; then
   mkdir $HOME/.config
 fi
 
+if [ -f $workspace/files/.xinitrc ]; then
+  ln -si $workspace/files/.xinitrc $HOME/.xinitrc
+fi
+
 # oh-my-zsh
 if [ ! -d $HOME/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -36,22 +40,19 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
     return 1
   fi
 fi
-if [ -f $workspace/.zshrc ]; then
-  ln -si $workspace/files/.zshrc $HOME/.zshrc
-fi
 
 # i3wm
-if [ -d $workspace/.config/i3 ]; then
+if [ -d $workspace/files/.config/i3 ]; then
   ln -sdi $workspace/files/.config/i3 $HOME/.config/
 fi
 
 # polybar
-if [ -d $workspace/.config/polybar ]; then
+if [ -d $workspace/files/.config/polybar ]; then
   ln -sdi $workspace/files/.config/polybar $HOME/.config/
 fi
 
 # compton
-if [ -f $workspace/.config/compton.conf ]; then
+if [ -f $workspace/files/.config/compton.conf ]; then
   ln -sf $workspace/files/.config/compton.conf $HOME/.config/compton.conf
 fi
 
