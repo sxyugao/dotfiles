@@ -11,7 +11,7 @@ sudo pacman -S archlinuxcn-keyring
 
 # install applications
 sudo pacman -S \
-xorg i3-gaps polybar dunst compton dmenu \
+xorg i3-gaps polybar dunst compton dmenu betterlockscreen \
 vim zsh curl xfce4-terminal \
 gcc clang npm python python-gobject python-gobject2 \
 wqy-microhei nerd-fonts-complete \
