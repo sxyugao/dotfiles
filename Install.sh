@@ -61,14 +61,12 @@ sudo cp $workspace/files/pause /usr/local/bin/pause
 
 # download gtk themes
 git clone https://github.com/vinceliuice/vimix-gtk-themes.git $HOME/Downloads/vimix-gtk-themes
-git clone https://github.com/vinceliuice/vimix-icon-theme.git $HOME/Downloads/vimix-icon-theme
 
 # install gtk themes
 cd $HOME/Downloads/vimix-gtk-themes/
 ./Install
 
-cd $HOME/Downloads/vimix-icon-theme/
-./Installer.sh
+sudo pacman -S tela-icon-theme-git
 
 # set basic git config
 git config --global user.name "sxyugao"
