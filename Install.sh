@@ -20,7 +20,7 @@ fcitx fcitx-{gtk2,gtk3,qt4,qt5} fcitx-sogoupinyin fcitx-configtool \
 gnome-screenshot pulseaudio pulseaudio-alsa pamixer nitrogen \
 lxappearance pavucontrol polkit-gnome thunar gvfs \
 pikaur visual-studio-code-bin \
-chromium netease-cloud-music playerctl
+chromium electron-netease-cloud-music playerctl
 
 pikaur -S lux clipit
 
