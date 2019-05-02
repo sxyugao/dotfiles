@@ -12,9 +12,8 @@ sudo pacman -S archlinuxcn-keyring
 # install applications
 sudo pacman -S \
 xorg i3-gaps polybar dunst compton dmenu betterlockscreen \
-vim zsh curl xfce4-terminal \
+vim zsh curl xfce4-terminal wqy-microhei nerd-fonts-complete \
 gcc clang npm python python-gobject python-gobject2 \
-wqy-microhei nerd-fonts-complete \
 networkmanager network-manager-applet \
 fcitx fcitx-{gtk2,gtk3,qt4,qt5} fcitx-sogoupinyin fcitx-configtool \
 gnome-screenshot pulseaudio pulseaudio-alsa pamixer nitrogen \
@@ -59,14 +58,8 @@ fi
 # place script "pause" into $PATH
 sudo cp $workspace/files/pause /usr/local/bin/pause
 
-# download gtk themes
-git clone https://github.com/vinceliuice/vimix-gtk-themes.git $HOME/Downloads/vimix-gtk-themes
-
 # install gtk themes
-cd $HOME/Downloads/vimix-gtk-themes/
-./Install
-
-sudo pacman -S tela-icon-theme-git
+sudo pacman -S vimix-gtk-themes-git tela-icon-theme-git
 
 # set basic git config
 git config --global user.name "sxyugao"
