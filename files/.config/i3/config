@@ -189,22 +189,21 @@ bindsym $mod+minus scratchpad show
 
 # Volume Control (backend: pulseaudio)
 bindsym XF86AudioMute exec --no-startup-id pamixer -t
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 7
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 7
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 
 # Backlight Control (backend: lux)
-bindsym XF86MonBrightnessDown exec --no-startup-id lux -s 50
-bindsym XF86MonBrightnessUp exec --no-startup-id lux -a 50
+bindsym XF86MonBrightnessDown exec --no-startup-id lux -s 20
+bindsym XF86MonBrightnessUp exec --no-startup-id lux -a 20
 
 # Application Launcher
 bindsym $mod+o mode "$funclauncher"
 set $funclauncher App: (w)eb browser, (f)ile manager, (m)usic player, (s)creenshot
 
 mode "$funclauncher" {
-  bindsym w exec --no-startup-id google-chrome-stable; mode "default"
-  bindsym Shift+w exec --no-startup-id google-chrome-stable --disable-web-security; mode "default"
+  bindsym w exec --no-startup-id chromium; mode "default"
   bindsym f exec --no-startup-id thunar; mode "default"
-  bindsym m exec --no-startup-id netease-cloud-music; mode "default"
+  bindsym m exec --no-startup-id electron-netease-cloud-music; mode "default"
   bindsym s exec --no-startup-id gnome-screenshot -a; mode "default"
   bindsym Escape mode "default"
   bindsym Return mode "default"
