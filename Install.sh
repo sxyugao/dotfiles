@@ -21,7 +21,7 @@ lxappearance pavucontrol polkit-gnome thunar gvfs \
 pikaur visual-studio-code-bin \
 chromium electron-netease-cloud-music playerctl
 
-pikaur -S lux clipit
+pikaur -S lux
 
 # set config
 if [ ! -d $HOME/.config ]; then
@@ -59,7 +59,11 @@ fi
 sudo cp $workspace/files/pause /usr/local/bin/pause
 
 # install gtk themes
-sudo pacman -S vimix-gtk-themes-git tela-icon-theme-git
+sudo pacman -S adwaita-icon-theme
+cp -r $workspace/files/.themes $HOME/.themes
+
+# copy wallpapers
+cp -r $workspace/files/Pictures $HOME/Pictures
 
 # set basic git config
 git config --global user.name "sxyugao"
