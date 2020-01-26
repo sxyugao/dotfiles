@@ -13,9 +13,9 @@ sudo pacman -S archlinuxcn-keyring
 sudo pacman -S \
 xorg i3-gaps polybar dunst compton dmenu betterlockscreen \
 vim zsh curl xfce4-terminal wqy-microhei nerd-fonts-complete \
-gcc clang npm python python-gobject python-gobject2 \
+gcc clang npm python python-gobject \
 networkmanager network-manager-applet \
-fcitx fcitx-{gtk2,gtk3,qt4,qt5} fcitx-sogoupinyin fcitx-configtool \
+fcitx-{qt4,qt5} fcitx-sogoupinyin fcitx-configtool \
 gnome-screenshot pulseaudio pulseaudio-alsa pamixer nitrogen \
 lxappearance pavucontrol polkit-gnome thunar gvfs \
 pikaur visual-studio-code-bin \
@@ -34,7 +34,7 @@ fi
 
 # oh-my-zsh
 if [ ! -d $HOME/.oh-my-zsh ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)"
   if [ $? -ne 0 ]; then
     return 1
   fi
