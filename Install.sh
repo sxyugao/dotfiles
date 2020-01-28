@@ -13,13 +13,12 @@ sudo pacman -S archlinuxcn-keyring
 sudo pacman -S \
 xorg i3-gaps polybar dunst compton dmenu betterlockscreen \
 vim zsh curl xfce4-terminal wqy-microhei nerd-fonts-complete \
-gcc clang npm python python-gobject \
-networkmanager network-manager-applet \
-fcitx-{qt4,qt5} fcitx-sogoupinyin fcitx-configtool \
-gnome-screenshot pulseaudio pulseaudio-alsa pamixer nitrogen \
+gcc clang npm python python-gobject playerctl \
+networkmanager network-manager-applet gthumb \
+fcitx-lilydjwg-git fcitx-sogoupinyin fcitx-configtool \
+flameshot pulseaudio pulseaudio-alsa pamixer nitrogen \
 lxappearance pavucontrol polkit-gnome thunar gvfs \
-pikaur visual-studio-code-bin \
-chromium electron-netease-cloud-music playerctl
+pikaur visual-studio-code-bin chromium electron-netease-cloud-music
 
 pikaur -S lux
 
@@ -59,8 +58,7 @@ fi
 sudo cp $workspace/files/pause /usr/local/bin/pause
 
 # install gtk themes
-sudo pacman -S adwaita-icon-theme
-cp -r $workspace/files/.themes $HOME/.themes
+sudo pacman -S vimix-gtk-themes-git flat-remix-git  
 
 # copy wallpapers
 cp -r $workspace/files/Pictures $HOME/Pictures
@@ -71,3 +69,15 @@ git config --global user.email "sxyugao@qq.com"
 
 # enable networkmanager service
 sudo systemctl enable NetworkManager
+
+# enable tapping
+sudo chmod 777 /etc/X11/xorg.conf.d
+sudo echo \
+'Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "Tapping" "on"
+EndSection' \
+> /etc/X11/xorg.conf.d/40-libinput.conf

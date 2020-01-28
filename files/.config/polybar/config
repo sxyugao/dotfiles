@@ -1,6 +1,5 @@
 ; Polybar Configuration
 ;
-; Configured by timber3252
 ; License: MIT
 ;
 ; Refer to Benedikt Vollmerhaus's configuration
@@ -69,7 +68,7 @@ font-4 = mplus Nerd Font:style=Medium:size=7;3
 [bar/top-primary]
 inherit = bar/base
 
-modules-left = now-playing right-end-top left-end-bottom volume right-end-top
+modules-left = player right-end-top left-end-bottom volume right-end-top
 modules-right = left-end-top wlan eth right-end-bottom left-end-top date right-end-bottom left-end-top
 
 tray-background = ${color.module-bg}
@@ -333,11 +332,11 @@ time-alt = %H:%M:%S
 
 label = %date%  %time%
 
-[module/now-playing]
+[module/player]
 type = custom/script
 inherit = generic-format-style
 
-exec = $HOME/.config/polybar/modules/now_playing.py
+exec = $HOME/.config/polybar/modules/player.py
 tail = true
 
 click-left = playerctl next

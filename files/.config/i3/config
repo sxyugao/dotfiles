@@ -178,8 +178,8 @@ smart_gaps on
 smart_borders on
 
 # take screenshots
-bindsym Print exec --no-startup-id gnome-screenshot
-bindsym $mod+Shift+Print exec --no-startup-id gnome-screenshot -ai
+bindsym Print exec --no-startup-id flameshot full -p Pictures/
+bindsym $mod+Shift+Print exec --no-startup-id flameshot gui
 
 # scratchpad workspace
 # Show the next scratchpad window or hide the focused scratchpad window.
